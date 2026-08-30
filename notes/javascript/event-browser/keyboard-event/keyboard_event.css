@@ -1,0 +1,19 @@
+body {
+    background-color: silver;
+}
+
+.name-output::before {
+    content: ", ";
+}
+
+.name-output::after {
+    content: "!";
+}
+
+.input-2.is-invalid {
+    border-color: red;
+}
+
+#error-message {
+    color: red  ;
+}
