@@ -1,0 +1,34 @@
+/*
+#first {
+    /*
+    background-color: #6b3d7d;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    */
+/*
+    color: red;
+    background: #6b3d7d url("https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg") no-repeat center;
+    height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#second {
+    height: 2000px;
+}
+*/
+
+.main-text {
+    color: red;
+    text-align: center;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+
+    text-transform: lowercase;
+    word-spacing: 50px;
+    text-decoration: line-through;
+    cursor: pointer;
+}

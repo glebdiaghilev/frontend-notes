@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.block {
+    background: red;
+    height: 200px;
+    width: 200px;
+    opacity: 0.5;
+
+    border: 10px dashed black; /*ширина формат(solid dashed dotted) цвет or border-right*/
+    border-top-style: solid;
+    border-top-color: green;
+    border-radius: 0px 30px;
+    
+    margin: 30px 20px;
+    margin-right: 20px;
+    padding: 30px 20px;
+    padding-right: 50px;
+    
+    display: block;
+}

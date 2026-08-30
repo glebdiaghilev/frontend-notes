@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility (ARIA) & Microdata (Schema.org)</title>
+</head>
+<body>
+
+    <!-- --- 1. Микроразметка (Microdata / Schema.org) --- -->
+    <!-- Помогает поисковым роботам (Google, Яндекс) понимать контекст данных на странице.
+         itemscope: создает локальный контейнер ("коробку") для объекта.
+         itemtype: вешает "ярлык", определяющий тип объекта по классификации schema.org.
+         itemprop: раскладывает свойства объекта (имя, роль, навыки) по полочкам. -->
+         
+    <section itemscope itemtype="http://schema.org">
+        <h2 itemprop="name">Aleksander Lamkov</h2>
+        <p itemprop="jobTitle">Frontend Developer</p>
+        
+        <div itemprop="description">
+            <p>I am demanding of the quality of my code, I follow the code-style.</p>
+        </div>
+
+        <h3>Skills</h3>
+        <ul>
+            <li itemprop="hasCredential">HTML5 & CSS3</li>
+            <li itemprop="hasCredential">JavaScript (ES6+, OOP)</li>
+            <li itemprop="hasCredential">TypeScript & React</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- --- 2. Доступность для скринридеров (ARIA Attributes) --- -->
+    <!-- Позволяет незрячим или слабовидящим людям полноценно пользоваться интерфейсом сайта 
+         при помощи голосовых программ-помощников. -->
+
+    <section>
+        <h2>Элементы доступности (Accessibility)</h2>
+
+        <!-- aria-label: задает текстовое описание для элементов без видимого текста на экране 
+             (например, кнопок-иконок в виде крестика, стрелочки или корзины) -->
+        <button type="button" aria-label="Закрыть модальное окно уведомления">×</button>
+        <button type="button" aria-label="Показать пароль">👁</button>
+
+        <br><br>
+
+        <!-- aria-labelledby: связывает элемент с заголовками или другими строками по их id,
+             составляя имя для элемента на основе текста из другого места -->
+        <div role="region" aria-labelledby="section-title">
+            <h3 id="section-title">Основной каталог товаров</h3>
+            <p>Содержимое региона, которое скринридер зачитает, ссылаясь на заголовок выше.</p>
+        </div>
+
+        <br>
+
+        <!-- aria-expanded: указывает текущее состояние интерактивного элемента.
+             true — окно/меню открыто, false — скрыто/свернуто. Меняется динамически через JS. -->
+        <button type="button" aria-expanded="false" aria-controls="mobile-menu">
+            Открыть мобильное меню
+        </button>
+
+        <nav id="mobile-menu" style="display: none;">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Каталог</a></li>
+            </ul>
+        </nav>
+    </section>
+
+</body>
+</html>

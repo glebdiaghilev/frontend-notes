@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia, Iframes & Figures</title>
+</head>
+<body>
+
+    <!-- --- 1. Работа с изображениями (Images) --- -->
+    <section>
+        <h2>Изображения</h2>
+        <!-- loading="lazy" — откладывает загрузку картинки, пока пользователь не доскроллит до неё (ускоряет сайт).
+             Атрибуты width и height резервируют место на экране до загрузки, чтобы контент не дёргался. -->
+        <img 
+            src="images/RobloxScreenShot20250725_151153251.png" 
+            alt="Скриншот игрового процесса в Roblox" 
+            width="300" 
+            height="250" 
+            loading="lazy"
+        >
+    </section>
+
+
+    <!-- --- 2. Контейнер Figure и Figcaption --- -->
+    <section>
+        <h2>Логические медиа-блоки</h2>
+        <!-- figure нужен для обособленных блоков с иллюстрациями, кодом, графиками или видео.
+             Если его вырезать из страницы, основной смысл текста не должен пострадать. -->
+        <figure>
+            <img src="images/RobloxScreenShot20250725_151153251.png" alt="Скриншот Roblox" width="300" height="250">
+            <!-- figcaption — подпись к элементу. Должен быть строго первым или последним внутри figure. -->
+            <figcaption>Рис. 1 — Пример интерфейса в игре Roblox.</figcaption>
+        </figure>
+    </section>
+
+
+    <!-- --- 3. Работа с Видео (Video) --- -->
+    <section>
+        <h2>Видеоконтент</h2>
+        
+        <!-- Способ 1: Простой запуск одиночного файла через атрибут src -->
+        <video 
+            src="video/Roblox-2025-11-03T12_26_04.306Z.mp4" 
+            controls 
+            width="400" 
+            height="200"
+        ></video>
+
+        <!-- Способ 2: Продвинутый, с поддержкой альтернативных форматов и заглушкой -->
+        <video controls width="480" height="270">
+            <source src="video/Roblox-2025-11-03T12_26_04.306Z.mp4" type="video/mp4">
+            <source src="video/Roblox-2025-11-03T12_26_04.306Z.webm" type="video/webm">
+            <!-- Текст-заглушка сработает, только если браузер совсем старый и не умеет в HTML5-видео -->
+            <p>К сожалению, ваш браузер не поддерживает встроенное видео.</p>
+        </video>
+
+        <!-- Способ 3: Автовоспроизведение и цикличный повтор.
+             Важно: Современные браузеры блокируют autoplay, если не указан атрибут muted! -->
+        <video 
+            src="video/Roblox-2025-11-03T12_26_04.306Z.mp4" 
+            controls 
+            width="480" 
+            height="270" 
+            autoplay 
+            muted 
+            loop
+        ></video>
+
+        <!-- Способ 4: Использование обложки (poster) и оптимизация для мобильных (playsinline) -->
+        <video 
+            src="video/Roblox-2025-11-03T12_26_04.306Z.mp4" 
+            controls 
+            width="480" 
+            height="270" 
+            poster="images/RobloxScreenShot20250725_151153251.png"
+            playsinline
+        ></video>
+    </section>
+
+
+    <!-- --- 4. Работа с Аудио (Audio) --- -->
+    <section>
+        <h2>Аудиоконтент</h2>
+        <audio controls loop>
+            <source src="audio/music.mp3" type="audio/mpeg">
+            <source src="audio/music.ogg" type="audio/ogg">
+            <!-- Альтернативное решение: если тег не поддерживается, предлагаем ссылку на скачивание -->
+            <p>
+                Ваш браузер не поддерживает аудиоэлемент. Попробуйте 
+                <a href="audio/music.mp3" download>скачать файл напрямую</a>.
+            </p>
+        </audio>
+    </section>
+
+
+    <!-- --- 5. Встраивание сторонних ресурсов (Iframe) --- -->
+    <section>
+        <h2>Встраиваемые фреймы (Iframe)</h2>
+        <!-- Устаревший атрибут frameborder="0" удален. Границы и стили настраиваются через CSS inline или файл.
+             Рекомендуется добавлять loading="lazy" для фреймов внизу страницы. -->
+        <iframe 
+            src="https://aleksanderlamkov.ru" 
+            width="500" 
+            height="500" 
+            style="border: none;"
+            loading="lazy"
+        ></iframe>
+    </section>
+
+</body>
+</html>

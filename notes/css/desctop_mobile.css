@@ -1,0 +1,76 @@
+/*
+min-width - минимальная ширина
+max-width - максимальная ширина
+
+min-height - минимальная высота
+max-height - максимальная высота
+
+@media - изменения сайта при определенном размере экрана
+
+можно ориентироваться на ширину и высоту
+чтобы проверить ориентацию положения устройство используем orientation
+print - позволяет определить тип устройства 
+
+чтобы устранить баг с hover на телефонах нужно для кнопок использовать
+@media (hover: hover) {кнопки с hover}
+*/
+/*
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    background-color: tomato;
+    height: 100px;
+    min-height: 100vh;
+    max-height: 100%;
+    overflow-y: auto;
+
+    width: 50%;
+    min-width: 200px;
+    max-width: 500px;
+}
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.catalog-title {
+    font-size: 64px;
+}
+
+.catalog-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px
+}
+
+.catalog-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    min-height: 100px;
+}
+
+@media (max-width: 700px) {
+    .catalog-title {
+        font-size: 36px;
+    }
+
+    .catalog-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .catalog-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (hover: hover) {
+    
+}

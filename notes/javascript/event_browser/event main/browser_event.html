@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="browser_event.css">
+    <script src="browser_event.js" defer></script>
+</head>
+<body>
+    <!-- обработка событий -->
+    <button type="button" onClick="logMessageOnClick()">
+        click me!
+    </button>
+
+    <button type="button" class="click-button-please">
+        click me now!
+    </button>
+
+    <button type="button" class="best-button-click">
+        click me, i`m better than this two losers!
+    </button>
+
+    <button type="button" class="button-1">
+        click me loser!
+    </button>
+
+    <button type="button" class="button-2">
+        delete event
+    </button>
+
+    <button type="button" class="button-object">
+        click if you rich!
+    </button>
+
+    <!-- всплытие и погружение событий -->
+    <div class="box-1">
+        box-1
+        <div class="box-2">
+            box-2
+            <div class="box-3">
+                box-3
+            </div>
+        </div>
+    </div>
+</body>
+</html>

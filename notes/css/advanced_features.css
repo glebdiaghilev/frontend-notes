@@ -1,0 +1,136 @@
+/* how to task to object in css. methods 
+p {
+    color: red;
+}
+
+/*
+a {
+    color: peru;
+}
+*/
+/*
+ul {
+    color: purple;
+}
+
+.super-text {
+    color: chartreuse;
+}
+
+#wrap {
+    color: aquamarine;
+}
+
+[placeholder] {
+    color: aquamarine;
+    border: 3px solid darkturquoise;
+    border-radius: 3px
+}
+
+[type="password"] {
+    box-shadow: 2px 2px 2px 2px rgb(255, 0, 0);
+}
+
+.legend {
+    color: darkturquoise;
+}
+
+#labelinges {
+    color: darkturquoise;
+}
+
+#text-form-fram {
+    color: rgb(255, 0, 0);
+}
+
+/* [href*="google.com"] 
+
+[href=^"https://"] {
+    color: green;
+}
+
+[href^="http://"] {
+    color: red;
+}
+
+[href$=".com"] {
+    background-image: linear-gradient(
+        white 33%,
+        blue 33%,
+        blue 66%,
+        red 33%
+    );
+}
+
+/* [alt~="cat"] */
+
+/* [class|="warning"] */
+
+/* [alt*="cat" i] {} 
+
+body {
+    font-family: Arial, sans-serif;
+}
+/*
+* {
+    border: 1px solid black;
+}
+    
+
+section p {
+    color: green;
+}
+
+section p span {
+    color: orange;
+}
+
+h1, h2, h3 {
+    color: darkmagenta;
+}
+
+/* .button.is-active {} 
+
+section > h2{
+    color: aqua;
+}
+
+h2 + p {
+    color: red;
+}
+
+h2 ~ p {
+    color: rgb(0, 0, 0);
+}
+*/
+
+/*
+.box {
+    display: block;
+    width: 100px;
+    height: auto;
+    margin: 20px;
+    padding: 30px;
+    border: 5px solid indianred;
+}
+
+span {
+    border: 5px solid aquamarine;
+    width: 100px;
+    height: 100px;
+    display: inline-flex; /*inline | none
+}
+
+.box-1 {
+    width: 200px;
+    height: 200px;
+    padding: 15px 40px;
+    background-color: yellow;
+    border: 10px solid red;
+    margin: 20px;
+}
+
+.box-2 {
+    box-sizing: border-box;
+} */
+

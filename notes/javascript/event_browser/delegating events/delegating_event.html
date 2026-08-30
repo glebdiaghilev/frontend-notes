@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="delegating_event.css">
+    <script src="delegating_event.js" defer></script>
+</head>
+<body>
+    <div class="todo">
+        <ul class="todo__list">
+            <li class="todo__item">Todo item...</li>
+            <li class="todo__item">Todo item...</li>
+            <li class="todo__item">Todo item...</li>
+            <li class="todo__item">Todo item...</li>
+            <li class="todo__item">Todo item...</li>
+            <li class="todo__item">Todo item...</li>
+            <li class="todo__item">Todo item...</li>
+            <li class="todo__item">Todo item...</li>
+            <li class="todo__item">Todo item...</li>
+            <li class="todo__item">Todo item...</li>
+            <li class="todo__item">Todo item...</li>
+            <li class="todo__item">Todo item...</li>
+            <li class="todo__item">Todo item...</li>
+        </ul>
+    </div>
+
+    <!-- усложнение задачи: доп. тег span -->
+    <div class="todo2">
+        <ul class="todo__list2">
+            <li class="todo__item2"><span>Todo item...</span></li>
+            <li class="todo__item2"><span>Todo item...</span></li>
+            <li class="todo__item2"><span>Todo item...</span></li>
+            <li class="todo__item2"><span>Todo item...</span></li>
+            <li class="todo__item2"><span>Todo item...</span></li>
+            <li class="todo__item2"><span>Todo item...</span></li>
+            <li class="todo__item2"><span>Todo item...</span></li>
+            <li class="todo__item2"><span>Todo item...</span></li>
+            <li class="todo__item2"><span>Todo item...</span></li>
+            <li class="todo__item2"><span>Todo item...</span></li>
+            <li class="todo__item2"><span>Todo item...</span></li>
+            <li class="todo__item2"><span>Todo item...</span></li>
+            <li class="todo__item2"><span>Todo item...</span></li>
+        </ul>
+    </div>
+
+    <a href="https://google.com">Google</a>
+
+    <!-- отмена действия браузера по умолчанию -->
+    <form>
+        <p>
+            <label for="login">login:</label>
+            <input id="login" name="login">
+        </p>
+        <p>
+            <label for="password">password:</label>
+            <input id="password" name="password">
+        </p>
+        <button type="submit">enter</button>
+    </form>
+
+    <!-- генерация кастомных событий -->
+    <main>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt dolor, commodi assumenda ipsa adipisci officiis a hic omnis? Ipsa dolorem nemo deserunt, vero obcaecati quas consequuntur voluptatibus magnam maxime similique!</p>
+        </section>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt dolor, commodi assumenda ipsa adipisci officiis a hic omnis? Ipsa dolorem nemo deserunt, vero obcaecati quas consequuntur voluptatibus magnam maxime similique!</p>
+        </section>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt dolor, commodi assumenda ipsa adipisci officiis a hic omnis? Ipsa dolorem nemo deserunt, vero obcaecati quas consequuntur voluptatibus magnam maxime similique!</p>
+        </section>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt dolor, commodi assumenda ipsa adipisci officiis a hic omnis? Ipsa dolorem nemo deserunt, vero obcaecati quas consequuntur voluptatibus magnam maxime similique!</p>
+        </section>
+    </main>
+    <div class="preloader">
+        <div class="preloader__in"></div>
+    </div>
+</body>
+</html>

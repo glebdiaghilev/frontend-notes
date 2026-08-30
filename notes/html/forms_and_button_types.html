@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & Button Types</title>
+</head>
+<body>
+
+    <!-- --- 1. Кнопки вне контекста форм --- -->
+    <section>
+        <h2>Интерфейсные кнопки (Обычные действия)</h2>
+        
+        <!-- type="button": дефолтная кнопка, ничего сама по себе не отправляет. 
+             Используется для навешивания JavaScript-событий (клик, закрытие окон, переключение слайдов). -->
+        <button type="button">Закрыть уведомление</button>
+        <button type="button">Назад</button>
+        <button type="button">Вперед</button>
+    </section>
+
+    <hr>
+
+    <!-- --- 2. Элементы форм (Forms & Inputs) --- -->
+    <section>
+        <h2>Работа с формами и типами отправки</h2>
+
+        <!-- Контейнер <form> собирает данные полей и отправляет их на сервер -->
+        <form>
+            <div>
+                <!-- input type="password" скрывает вводимые пользователем символы точками или звездочками -->
+                <label for="user-password">Пароль:</label>
+                <input type="password" id="user-password" placeholder="Введите ваш пароль">
+            </div>
+
+            <!-- type="button" внутри формы НЕ отправляет её, часто используется для служебных иконок/интерфейсов -->
+            <button type="button">Показать/Скрыть пароль (Иконка)</button>
+
+            <!-- type="submit": Самая важная кнопка в формах. Триггерит событие отправки данных (submit) на сервер. -->
+            <button type="submit">Войти</button>
+        </form>
+
+        <br>
+
+        <form>
+            <!-- Пример формы с фильтрами, где нужен быстрый сброс -->
+            <div>
+                <label><input type="checkbox"> Смартфоны</label>
+                <label><input type="checkbox"> Ноутбуки</label>
+            </div>
+
+            <!-- type="reset": Полностью очищает форму и возвращает все поля (инпуты, чекбоксы) к исходному состоянию. -->
+            <button type="reset">Сбросить фильтр</button>
+        </form>
+    </section>
+
+</body>
+</html>

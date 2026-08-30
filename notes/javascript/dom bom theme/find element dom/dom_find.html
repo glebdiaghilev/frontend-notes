@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- style only for visualization -->
+    <link rel="stylesheet" href="dom_find.css">
+    <script src="dom_find_element.js" defer></script>
+</head>
+<body>
+    <!-- querySelector и getElementById -->
+    <div class="box-1">
+        box-1
+        <div class="box-2">
+            box-2
+            <div class="box-3">
+                <button
+                id="myButton"
+                type="button"
+                >
+                click
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- querySelectorAll -->
+    <ul class="list">
+        <li class="item">Item</li>
+        <li class="item">Item</li>
+        <li class="item">Item</li>
+        <li class="item">Item</li>
+        <li class="item">Item</li>
+        <li class="item">Item</li>
+    </ul>
+
+    <!-- combination -->
+    <div id="wrapper">
+        <ul class="list">
+            <li class="item">item</li>
+            <li class="item">item</li>
+            <li class="item">item</li>
+            <li class="item">item</li>
+        </ul>
+    </div>
+
+    <!-- finding parent elements -->
+    <div class="object-1">
+        <div class="object-2">
+            <div class="object-3"></div>
+        </div>
+    </div>
+
+    <!-- rare methods -->
+    <fieldset class="radio-group">
+        <legend>choose:</legend>
+        <div>
+            <input id="frontend" name="specialization" type="radio" checked>
+            <label for="frontend">Frontend</label>
+        </div>
+        <div>
+            <input id="backend" name="specialization" type="radio">
+            <label for="backend">Frontend</label>
+        </div>
+        <div>
+            <input id="mobile" name="specialization" type="radio">
+            <label for="mobile">Frontend</label>
+        </div>
+    </fieldset>
+
+    <!-- naming -->
+    <a href="/">link</a>
+
+    <ol>
+        <li>...</li>
+    </ol>
+
+    <!-- advanced finding -->
+     <div class="slider" data-js-slider>
+        <ul class="slider__list" data-js-slider-list>
+            <li class="slider__slide" data-js-slider-slide>...</li>
+            <li class="slider__slide" data-js-slider-slide>...</li>
+            <li class="slider__slide" data-js-slider-slide>...</li>
+            <li class="slider__slide" data-js-slider-slide>...</li>
+        </ul>
+     </div>
+</body>
+</html>

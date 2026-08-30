@@ -1,0 +1,12 @@
+{
+    "name": "gleb",
+    "age": 67,
+    "city": "Moscow",
+    "address": {
+        "street": "st. ronaldo h. 185 fl. 10",
+        "zipcode": 123456
+    },
+    "todos": ["sleep", "eat", "work", "train", "learn"],
+    "hasCat": true,
+    "yacht": false
+}

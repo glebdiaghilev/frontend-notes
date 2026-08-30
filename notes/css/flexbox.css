@@ -1,0 +1,86 @@
+/*
+flex-container - блок или объект со значением display: flex;
+flex-elements - элементы внутри flex-container
+
+flex-container имеет две оси: основная и поперечная.
+основная слева до права, поперечная сверху вниз.
+
+flex - блочный элемент с правилами flex
+inline-flex - строчный элемент с правилами flex
+
+flex-direction - меняет оси и их направление.
+
+flex-wrap - переносит содержимое
+flex-wrap-reverse - переносит содержимое наоборот
+flex-flow - два ключевых слова перечисляются
+
+flex-grow - указывает может ли элемент растягиваться
+flex-shrink - указывает может ли элемент уменьшаться 
+flex-basis - указывает изначальные размеры до правок
+flex: grow shrink basis - универсальный метод вместо shrink, basis, grow
+
+gap - замена margin, ставит отступы только там, где нужно
+
+justify-content: flex-start(все в начале)/flex-end(все в конце)/
+center(все по центру)/space-between(первый в начале последний в конце, свободное по ровну)/
+space-around(пустота окружает элемент по ровну) - по горизонтали
+align-items: center(по центру), flex-start(к верху), flex-end(к низу), stretch(растяжение по всей высоте) - по вертикали
+align-content: stretch(одинаково), flex-start(в начале), flex-end(в конце), center(по центру), 
+space-between(первый в начале последний в конце, свободное по ровну),
+space-around(пустота окружает элемент по ровну),
+space-evenly(все промежутки одинаковы) - определить свободное место между рядами.
+
+order() - помогает менять местами блоки
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container-1, .flex-container-2, .flex-container-3 {
+    width: 100%;
+    height: 200px;
+
+    background-image: linear-gradient(45deg, red, blue);
+    margin-bottom: 30px;
+
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+}
+
+.flex-element-1 {
+    /*flex-grow: 1;*/
+    width: 80%;
+    height: 50px;
+
+    background-image: linear-gradient(-45deg, green, yellow);
+
+    margin: 20px 10% 20px 10%;
+    text-align: center;
+}
+
+.flex-element-2, .flex-element-3 {
+    width: 40%;
+    height: 50px;
+
+    background-image: linear-gradient(60deg, orange, white);
+
+    margin: 10px;
+    text-align: center;
+    align-self: flex-start;
+}
+
+.flex-container-1 {
+    flex-direction: column; 
+}
+
+.flex-container-2 {
+    flex-direction: row-reverse; 
+}
+
+.flex-container-3 {
+    flex-direction: column-reverse; 
+}

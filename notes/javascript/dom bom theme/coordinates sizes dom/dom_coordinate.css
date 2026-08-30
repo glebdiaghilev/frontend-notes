@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+}
+
+/*
+изучаем 
+offsetWidth offsetHeight 
+clientTop clientLeft
+*/
+
+.box {
+    /* 
+    все свойства, которые влияют на значение размеров 
+    */
+    overflow: auto;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+    background-color: lightseagreen;
+    border: 20px solid indianred;
+
+    /*
+    укажем border width для наглядности примера
+    */
+    border-left-width: 30px;
+    border-top-width: 10px;
+
+    /*
+    понимаем необходимость clientLeft clientTop
+    */
+    direction: rtl;
+}
+
+/*
+clientWidth clientHeight
+scrollWidth scrollHeight
+scrollLeft scrollTop
+*/
+
+.box-2 {
+    /* 
+    все свойства, которые влияют на значение размеров 
+    */
+    overflow: auto;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+    background-color: lightseagreen;
+    border: 20px solid indianred;
+}
+
+/*
+coordinates theme
+*/
+.box-3 {
+    width: 100px;
+    height: 100px;
+    background-color: indianred;
+}

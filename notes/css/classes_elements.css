@@ -1,0 +1,65 @@
+p.text:empty::after {
+    content: attr(title);
+}
+
+#some_id::before {
+    content: "123";
+    color: red;
+    text-decoration: line-through;
+}
+
+p.main-link::first-letter { /*first-line*/
+    color: green;
+}
+
+p:first-of-type { /*last-of-type*/
+    text-decoration: line-through;
+}
+
+.main-link {
+    color: red;
+    text-decoration: none;
+}
+
+.main-link:hover {
+    color: blue;
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    cursor: pointer;
+}
+
+.main-link:active {
+    text-decoration: line-through;
+    text-decoration-color: yellow;
+}
+
+.main-link:visited {
+    color: grey;
+}
+
+input {
+    color: blue;
+}
+
+input:focus {
+    color: red 
+}
+
+.disabled-input:disabled {
+    color: black;
+}
+
+/*
+псевдоэлементы - ::, работа с элементами
+enabled, empty, :not(:empty), 
+::placeholder - стилизовать placeholder, 
+::file-selector-button - стилизовать кнопку choose file,
+::selection - стилизовать выделение текста
+::marker - стилизовать точку неопределенного списка
+
+псевдоклассы - :, работа с состоянием элементов
+(number of element, nth or last)-child (odo/even) - обратиться по номеру к элементу,
+only-child - выбирает элемент, который является единственным дочерним элементом своего родителя,
+focus-visible - тоже самое что и focus только лучше,
+checked - стилизовать квадратик возле текста, стили не работают, разве что только тени
+*/

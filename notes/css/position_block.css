@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    height: 2000px;
+}
+
+#some_block {
+    background: red;
+
+    color: #16c8db;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+
+    border-radius: 50%;
+
+    position: fixed; /*absolute - независимо будет везде без отступов, fixed - приклеится к экрану*/
+    left: 20px;
+    top: 50px;
+}
+
+#header, #footer {
+    width: 100%;
+    height: 50px;
+
+    text-align: center;
+    font-style: normal;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    color: white;
+
+    background: black;
+
+    line-height: 50px;
+    margin-bottom: 50px;
+    border-bottom: 5px solid silver;
+
+    float: left;
+}
+
+#nav {
+    list-style: none;
+    display: block;
+    width: 50%;
+    float: left;
+    margin-left: 25%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#nav li {
+    display: inline;
+    background: #16c8db;
+
+    border: 3px solid silver;
+    border-radius: 5px;
+    padding: 0px 20px;
+
+    cursor: pointer;
+}
+
+#nav-active li:active {
+    opacity: 0.8;
+    background: #16c8db;
+    border-color: blue;
+}
+
+#nav li:hover {
+    color: white;
+    background: black;
+    border-color: #16c8db;
+} 
+
+#nav li:not(:last-of-type) {
+    margin-right: 20px;
+}
+
+#main {
+    width: 50%;
+
+    background: #16c8db;
+
+    margin-left: 10%;
+    border: 1px solid silver;
+    border-radius: 10px;
+    padding: 20px 2.5%;
+
+    float: left;
+
+    z-index: 1;
+}
+
+#aside {
+   width: 20%;
+
+   padding: 20px 2.5%;
+   margin-left: 5%;
+   border: 1px solid silver;
+   border-radius: 10px;
+
+   background: #16c8db;
+
+   float: left;
+   position: relative; /*relative - просто можно менять позицию объекта sticky - липнет к экрану, но не навсегда, если уходит из зоны*/
+   bottom: 0px;
+
+   z-index: 0;
+}
+
+#footer {
+    margin-bottom: 0;
+    margin-top: 50px;
+    border-bottom: 0;
+    border-top: 5px solid silver;
+}
+
+/*inset: 0; - принимает размеры родительского блока*/

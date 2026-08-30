@@ -1,0 +1,144 @@
+body {
+    background-color: #bdc1c7;
+    font-size: 24px;
+} 
+
+.box {
+    padding: 30px;
+    background-color: lightsalmon;
+    border-radius: 5px;
+}
+
+.box-1, .box-2, .box-3 {
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: transparent;
+}
+
+.box-1 {
+    margin-block: 20px;
+    width: 400px;
+    height: 200px;
+    background-color: lightsalmon;
+}
+
+.box-2 {
+    width: 300px;
+    height: 150px;
+    background-color: royalblue;
+}
+
+.box-3 {
+    width: 200px;
+    height: 100px;
+    background-color: hotpink;
+}
+
+.button {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.box-1::before, .box-2::before, .box-3::before {
+    content: "box-1";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: black;
+    font-weight: bolder;
+}
+
+.box-2::before {
+    content: "box-2";
+}
+
+.box-3::before {
+    content: "box-3";
+}
+
+.box-4 {
+    margin-block: 10px;
+    width: 200px;
+    height: 200px;
+
+    background-color: lightskyblue;
+}
+
+.circle {
+    position: absolute;
+    width: 50px;
+    aspect-ratio: 1;
+    background-color: dodgerblue;
+    border-radius: 50%;
+    translate: -50% -50%;
+    user-select: none;
+}
+
+.circle.red {
+    background-color: red;
+}
+
+.circle__label {
+    position: absolute;
+    bottom: -5%;
+    left: 105%;
+    pointer-events: none;
+    user-select: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}
+
+.chicken,
+.fish,
+.shrimp {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.chicken {
+    top: 20px;
+    left: 20px;
+}
+
+.fish {
+    top: 20px;
+    left: 120px
+}
+
+.shrimp {
+    top: 20px;
+    left: 220px
+}
+
+.cat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 200px;
+}
+
+.draggable {
+    position: absolute;
+    z-index: 1;
+    cursor: grab;
+    transition-property: scale, opacity;
+    transition-duration: 0.2s;
+    touch-action: none;
+}
+
+.draggable.is-dragging {
+    cursor: grabbing;
+    opacity: 0.5;
+    scale: 1.05;
+}

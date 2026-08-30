@@ -1,0 +1,38 @@
+/*
+определение разницы window и 
+document. 
+*/
+body {
+    /*
+    min-width: 200vw;
+    min-height: 200vh;
+    */
+    background-color: silver;
+}
+
+h2 {
+    
+    margin-left: 5%;
+
+    font-size: large;
+    font-weight: 700;
+    font-style: normal;
+}
+
+p {
+   display: flex;
+   flex-direction: column; 
+}
+
+#about, #catalog, #reviews, #contacts {
+    width: 90%;
+    height: 70vh;
+    border: 5px solid lightskyblue;
+
+    background-color: white;
+
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 30px;
+}
+

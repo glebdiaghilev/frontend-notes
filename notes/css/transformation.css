@@ -1,0 +1,107 @@
+/*
+transform - искажает и меняет объект будь то позиция или сам объект
+
+translateX() - по горизонтали
+translateY() - по вертикали
+translate(x, y) - универсальный гибрид
+
+scaleX() - увеличивает или уменьшает объект по горизонтали
+scaleY() - увеличивает или уменьшает объект по вертикали
+scale(x, y or (x,y) ) - гибрид для масштабирования объекта
+
+rotate() - поворачивает объект используем deg
+
+skewX() - искажает объект по горизонтали
+skewY() - искажает объект по вертикали
+skew(x, y) - искажает объект по обеим осям
+
+есть отдельные новые методы без transform: rotate, scale, translate
+
+transform-origin: x y; - задает положение элементу, помогает translate, rotate 
+
+transition - добавляет переходы к объекту. включает:
+transition-property: all; - имя к чему хотим добавить переход
+transition-duration: 0s; - длительность перехода
+transition-timing-function: ease; - скорость изменения свойства
+transition-delay: 0s; - длительность задержки перехода
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.box-1, .box-2 {
+    width: 200px;
+    height: 200px;
+
+    background-color: lightblue;
+    border: 5px solid green;
+    box-shadow: 10px -10px 5px red;
+
+    margin: 50px;
+}
+
+.box-2 {
+    transform: translateX(50px);
+    transform: translateY(50px);
+    transform: translate(100px, 100px);
+    transform: scaleX(2);
+    transform: scaleY(-2);
+    transform: scale(2);
+    transform: rotate(45deg);
+    transform: skewX(0deg);
+    transform: skewY(0deg);
+    transform: skew(45deg, 60deg);
+    transform: scaleX(1) scaleY(1) translateX(50px);
+}
+
+.box-3 {
+    width: 100px;
+    height: 100px;
+
+    margin: 20px;
+
+    background-color: lightskyblue;
+    border: 5px solid salmon;
+}
+
+.inner-box {
+    width: 75px;
+    height: 75px;
+    background-color: green;
+    rotate: 45deg;
+
+    transform-origin: 0 0;
+}
+
+.translated-on-hover, .rotate-on-hover, .scale-on-hover {
+    width: 100%;
+    height: 50px;
+
+    background-color: none;
+    border: 5px solid black;
+
+    margin-bottom: 20px;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border: 2px solid red;
+
+    transition: 1s 1s;
+}
+
+.translated-on-hover:hover .box {
+    translate: 75vw;
+}
+
+.scale-on-hover:hover .box {
+    scale: 2;
+}
+
+.rotate-on-hover:hover .box {
+    rotate: 45deg;
+}
