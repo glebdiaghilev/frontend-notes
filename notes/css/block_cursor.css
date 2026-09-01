@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.block {
+    background: red;
+    height: 200px;
+    width: 200px;
+    opacity: 0.5;
+
+    border: 10px dashed black; /*ширина формат(solid dashed dotted) цвет or border-right*/
+    border-top-style: solid;
+    border-top-color: green;
+    border-radius: 0px 30px;
+    
+    margin: 30px 20px;
+    margin-right: 20px;
+    padding: 30px 20px;
+    padding-right: 50px;
+    
+    display: block;
+}
+
+/*
+cursor - определяет изображение курсора при
+наведении на элемент.
+
+виды курсоров при наведении на элемент:
+cursor: all-scroll;
+cursor: alias;
+cursor: cell;
+cursor: col-resize;
+cursor: context-menu;
+cursor: copy;
+cursor: crosshair;
+cursor: grab;
+cursor: grabbing;
+cursor: help;
+cursor: move;
+cursor: no-drop;
+cursor: not-allowed;
+cursor: progress;
+cursor: row-resize;
+cursor: vertical-text;
+cursor: wait; 
+cursor: zoom-in;
+cursor: zoom-out;
+cursor: url('custom cursor image'), auto
+
+user-select - определяет, можно ли выделять текст.
+
+user-select: auto; - браузер определяет правила выделения
+user-select: none; - нельзя выделять текст
+
+pointer-events - отвечает за то, можно ли пользователю
+нажимать на элемент
+
+pointer-events: auto; - можно
+pointer-events: none; - нельзя
+
+resize - указывает правило того, как можно изменять размер
+элемента с помощью манипуляции перетаскивания правого
+нижнего угла. часто применяется к textarea
+
+resize: none; - нельзя менять размеры
+resize: both; - можно менять размеры
+resize: horizontal; - только по горизонтали
+resize: vertical; - только по вертикали
+
+scroll-behavior - определяет то, как будет вести себя
+анимация скролла после нажатия на ссылку или после применения
+программного скролла через js. 
+
+scroll-behavior: auto; - значение по умолчанию
+scroll-behavior: smooth; - то же самое но прокрутка плавная
+*/

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="form.js" defer></script>
+</head>
+<body>
+    <form id="regForm" action="/registration" method="post">
+        <p class="field">
+            <label class="field__label" for="login">login:</label>
+            <input class="field__control" id="login" name="login">
+        </p>
+        <p class="field">
+            <label class="field__label" for="password">password:</label>
+            <input class="field__control" id="password" name="password" type="password">
+        </p>
+        <p class="field">
+            <label class="field__label" for="about">about:</label>
+            <textarea class="field__control" id="about" name="about"></textarea>
+        </p>
+        <fieldset class="radios">
+            <legend class="radios__legend">you gender</legend>
+
+            <input class="radios__control" id="male" name="gender" type="radio">
+            <label for="male" class="radios__label">male</label>
+
+            <input class="radios__control" id="female" name="gender" type="radio">
+            <label for="female" class="radios__label">female</label>
+        </fieldset>
+        <div class="field checkbox">
+            <input type="checkbox" class="checkbox__control" id="agreement" name="agreement">
+            <label for="agreement" class="field__label">agree for all!</label>
+        </div>
+        <button type="submit">registration</button>
+    </form>
+
+    <div class="city-selection">
+        <label for="city">you city:</label>
+        <select name="city" id="city" form="regForm">
+            <option value="Moscow">Moscow</option>
+            <option value="London">London</option>
+            <option value="Albuquerque">Albuquerque</option>
+            <option value="New-York">New-York</option>
+        </select>
+    </div>
+
+    <form id="authForm" action="/auth" method="post">
+        <p class="field">
+            <label class="field__label" for="auth-login">login:</label>
+            <input class="field__control" id="auth-login" name="login">
+        </p>
+        <p class="field">
+            <label class="field__label" for="auth-password">password:</label>
+            <input class="field__control" id="auth-password" name="password">
+        </p>
+        <button type="submit">enter</button>
+    </form>
+</body>
+</html>
