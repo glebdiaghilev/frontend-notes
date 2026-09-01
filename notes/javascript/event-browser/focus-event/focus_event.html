@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="focus_event.css">
+    <script src="focus_event.js" defer></script>
+</head>
+<body>
+    <form action="">
+        <p>
+            <label for="login">login:</label>
+            <input id="login" placeholder="username">
+        </p>
+
+        <div class="modal">
+            <button type="button" id="modal-button-1">button 1</button>
+            <button type="button" id="modal-button-2">button 2</button>
+            <button type="button" id="modal-button-3">button 3</button>
+        </div>
+
+        <p>
+            <label for="password">password:</label>
+            <input id="password" placeholder="qwerty" type="password">
+        </p>
+        <p>
+            <button class="button-submit" type="submit">enter</button>
+        </p>
+
+        <button class="button" id="button-1">button 1</button>
+        <div class="button" id="button-2" tabindex="0">button 2</div>
+        <button class="button" id="button-3">button 3</button>
+    </form>
+</body>
+</html>

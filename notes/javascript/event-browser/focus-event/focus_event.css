@@ -1,0 +1,49 @@
+body {
+    background-color: bisque;
+}
+
+label, input {
+  display: block; 
+  width: 200px; 
+}
+
+label {
+  margin-bottom: 6px; 
+}
+
+input:focus, button:focus {
+    box-shadow: 5px 5px 5px purple;
+}
+
+.button-submit {
+    width: 206px;
+}
+
+.is-invalid {
+    border: 2px solid red;
+}
+
+.button {
+    margin-block: 10px;
+    margin-inline: 10px;
+    width: 200px;
+    height: 75px;
+    background-color: aquamarine;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+#button-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+}
+
+.modal:not(.is-active) {
+    scale: 0;
+}
