@@ -5,21 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="form.css">
-    <script src="../form-data-collection.js" defer></script>
+    <script src="../form-validity.js" defer></script>
     <!--
     <script src="../form-management.js" defer></script>
     <script src="../form-data-collection.js" defer></script>
+    <script src="../form-validity.js" defer></script>
     -->
 </head>
 <body>
-    <form id="regForm" action="/registration" method="post">
+    <form id="regForm" action="/registration" method="post" novalidate data-js-form>
         <p class="field">
             <label class="field__label" for="login">login:</label>
-            <input class="field__control" id="login" name="login">
+            <input 
+                class="field__control" 
+                id="login" 
+                name="login"
+                required
+                minlength="3"
+                maxlength="12"
+                aria-errormessage="login-errors"
+            >
+            <span class="field__errors" id="login-errors" data-js-form-field-errors></span>
         </p>
         <p class="field">
             <label class="field__label" for="password">password:</label>
-            <input class="field__control" id="password" name="password" type="password">
+            <input 
+                class="field__control" 
+                id="password" 
+                name="password" 
+                type="password"
+                required
+                minlength="8"
+                maxlength="16"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}"
+                title="password should be from 8 to 16 symbols, include one number, one small and one big letter"
+                aria-errormessage="password-errors"
+            >
+            <span class="field__errors" id="password-errors" data-js-form-field-errors></span>
         </p>
         <p class="field">
             <label class="field__label" for="about">about:</label>
@@ -28,15 +50,41 @@
         <fieldset class="radios">
             <legend class="radios__legend">you gender</legend>
 
-            <input class="radios__control" id="male" name="gender" type="radio" value="male">
+            <input 
+                class="radios__control" 
+                id="male" name="gender" 
+                type="radio" 
+                value="male"
+                required
+                aria-errormessage="gender-errors"
+            >
             <label for="male" class="radios__label">male</label>
 
-            <input class="radios__control" id="female" name="gender" type="radio" value="female">
+            <input 
+                class="radios__control" 
+                id="female" 
+                name="gender" 
+                type="radio" 
+                value="female"
+                required
+                aria-errormessage="gender-errors"
+            >
             <label for="female" class="radios__label">female</label>
+
+            <span class="field__errors" id="gender-errors" data-js-form-field-errors></span>
         </fieldset>
         <div class="field checkbox">
-            <input type="checkbox" class="checkbox__control" id="agreement" name="agreement">
+            <input 
+                type="checkbox" 
+                class="checkbox__control" 
+                id="agreement" 
+                name="agreement"
+                required
+                aria-errormessage="agreement-errors"
+            >
             <label for="agreement" class="field__label">agree for all!</label>
+
+            <span class="field__errors" id="agreement-errors" data-js-form-field-errors></span>
         </div>
         <button type="submit">registration</button>
     </form>
