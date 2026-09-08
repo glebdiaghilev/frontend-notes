@@ -1,0 +1,55 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "title": "savage",
+      "id": "3",
+      "views": 300
+    },
+    {
+      "title": "savage",
+      "id": "4",
+      "views": 400
+    },
+    {
+      "title": "аналитика туристического рынка России",
+      "id": "5",
+      "views": 500
+    },
+    {
+      "title": "аналитика туристического рынка России",
+      "id": "6",
+      "views": 600
+    },
+    {
+      "title": "аналитика туристического рынка",
+      "id": "ewf_hmT01yA",
+      "views": 0
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "$schema": "./node_modules/json-server/schema.json"
+}
