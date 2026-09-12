@@ -3,7 +3,7 @@ my stack:
 1. html [completed]
 2. css [completed]
 3. scss [completed]
-4. javascript
+4. javascript [completed]
 5. typescript
 6. react
 7. angular

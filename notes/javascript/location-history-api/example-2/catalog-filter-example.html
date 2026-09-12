@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="location-history-api.css">
+    <script src="catalog-filter-example.js" defer></script>
+</head>
+<body style="background-color: aquamarine">
+    <form class="filter">
+        <p>
+            <label for="query">find on product name:</label>
+            <input id="query" name="query" placeholder="sofa...">
+        </p>
+        <p>
+            <label for="min-price">minimum price:</label>
+            <input id="min-price" name="min-price" value="0" type="number">
+        </p>
+        <p>
+            <label for="max-price">maximum price:</label>
+            <input id="max-price" name="max-price" value="10000" type="number">
+        </p>
+
+        <button type="submit">find</button>
+    </form>
+</body>
+</html>
