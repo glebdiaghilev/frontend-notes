@@ -29,6 +29,9 @@ generic называют <T> (сокращено type).
 
 у generic можно задавать не только ограничения, но и
 стандартное значение: <Data = string>.
+
+условные типы (conditional types) - это использование
+тернарных операторов для generic.  
 */
 // generics
 interface MetaData {
@@ -147,3 +150,13 @@ interface ApiResponse2<Data = string> {
 const response2: ApiResponse2 = {
     data: 'str'
 }
+
+// условные типы conditional types
+type isArray<T> = T extends unknown[] ? true : false
+
+const first: isArray<string> = false
+const second: isArray<string[]> = true
+
+type RandomName<T> = T extends User ? { value: number } : { value: string }
+
+const third: RandomName<User> = { value: 42 }
