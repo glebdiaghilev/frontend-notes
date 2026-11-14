@@ -1,105 +1,131 @@
 /*
-в react все строится из компонентов. 
+в react все строится из компонентов.
+компонент - это обычная js функция, которая начинается с заглавной буквы
+и которая возвращает разметку, то есть jsx.
 
-компонент - это обычная js функция, которая начинается с
-заглавной буквы, и которая возвращает разметку, то есть - jsx.
+у нас есть компонент App. такая функция может принимать входные параметры props,
+и на их основе рендерить интерфейс.
 
-jsx - специальный синтаксис, который позволяет писать html-подобную
-разметку внутри js кода. формально - это js расширение с расширением
-синтаксиса.
-
-под капотом jsx компилируется в react create element, но думать об этом
-не стоит.
-
-jsx нужен, чтобы разметка и логика не находились в разных файлах, 
-а существовали внутри компонента вместе. Это дает гибкости.
-
-jsx является js просто с синтаксическим сахаром. можно сказать, что это -
-шаблонизатор разметки, встроенный прямо в js, но jsx работает по другим принципам.
-
-особенности синтаксиса jsx:
-1. jsx требует, чтобы после return вокруг разметки всегда были круглые скобки;
-2. jsx требует, чтобы в return всегда был один корневой элемент. можно 
-использовать fragment <></>;
-3. в jsx можно вставлять значения из javascript, оборачивая их в фигурные скобки;
-нужно иметь в виду, что вставлять конструкции по-типу: if, for и т.д. нельзя;
-4. можно писать комментарии в jsx, но в dom дереве и в браузере их никак не увидеть;
-5. jsx требует обязательно закрывать одиночные теги: <br />. 
-
-в jsx можно писать атрибуты (параметры), их так же называют пропсами. 
-атрибуты в jsx пишутся в стиле camelCase, а значения в фигурных скобках,
-если это не строка.
-
-у jsx есть подводные камни:
-1. для тегов нельзя прописывать class для стилей, так как это слово зарезервированно
-для классов в js. вместо этого нужно прописывать className="title";
-2. для тегов нельзя прописывать for, чтобы, например, привязать label и input, так как
-это слово зарезервированно для циклов в js. нужно писать htmlFor;
-3. тут нельзя писать: style="color: red, fontWeight: 700" - нужно: style={{ color: 'red' }}.
-синтаксис состоит из двойных фигурных скобок. первая пара скобок - синтаксис jsx. здесь мы
-говорим, что вставим дальше выражение. вторая пара скобок - это объект js со стилями.
-
-условный рендеринг - важная концепция jsx, можно показывать или скрывать элементы в зависимости
-от каких-либо условий. к примеру, если условие истинно, то рендерится элемент, если условие ложно,
-то нет.
-
-react требует, чтобы у каждого элемента списка был уникальный key. это помогает react следить за тем,
-какие элементы добавились, удалились и изменились.
+упрощенно компонент является кусочком разметки у которого есть своя логика и разметка,
+причем этот кусочек можно переиспользовать в разных местах.
 */
-const username = 'gleb'
-const isLoggedIn = false
+const Hello = () => <h1>hello</h1>
 
 const App = () => {
-  /*
-  на первый взгляд кажется, что перед нами просто html,
-  но это - не так. это jsx
-
-  к примеру строка: <h1>to do list</h1> - не строка, не html, а
-  объект js - это значит, что можно программно управлять тем, что
-  показывается на экране.
-  */
-  // можно сделать так и использовать if-else вместо тернарных операторов
-  let content
-
-  if (isLoggedIn) {
-    content = <p>hi, {username}!</p>
-  } else {
-    content = <button>log in</button>
-  }
-
-  const tasks = [
-    'punch cat',
-    'throw coffe',
-    'watch tiktok',
-  ]
-
   return (
-    <>
-      <h1 className="title">to do list</h1>
-      <ul>
-        {tasks.map((task) => <li key={task}>{task}</li>)}
+    <div className="todo">
+      <h1 className="todo__title">To Do List</h1>
+      <form className="todo__form">
+        <div className="todo__field field">
+          <label
+            className="field__label"
+            htmlFor="new-task"
+          >
+            New task
+          </label>
+          <input
+            className="field__input"
+            id="new-task"
+            placeholder=" "
+            autoComplete="off"
+          />
+        </div>
+        <button className="button" type="submit">Add</button>
+      </form>
+      <form className="todo__form">
+        <div className="todo__field field">
+          <label
+            className="field__label"
+            htmlFor="search-task"
+          >
+            Search task
+          </label>
+          <input
+            className="field__input"
+            id="search-task"
+            placeholder=" "
+            autoComplete="off"
+            type="search"
+          />
+        </div>
+      </form>
+      <div className="todo__info">
+        <div className="todo__total-tasks">Total tasks: <span>0</span></div>
+        <button className="todo__delete-all-button" type="button">Delete all</button>
+      </div>
+      <ul className="todo__list">
+        <li className="todo__item todo-item">
+          <input
+            className="todo-item__checkbox"
+            id="task-1"
+            type="checkbox"
+            checked
+          />
+          <label
+            className="todo-item__label"
+            htmlFor="task-1"
+          >
+            Task 1
+          </label>
+          <button
+            className="todo-item__delete-button"
+            aria-label="Delete"
+            title="Delete"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 5L5 15M5 5L15 15"
+                stroke="#757575"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </li>
+        <li className="todo__item todo-item">
+          <input
+            className="todo-item__checkbox"
+            id="task-2"
+            type="checkbox"
+          />
+          <label
+            className="todo-item__label"
+            htmlFor="task-2"
+          >
+            Task 2
+          </label>
+          <button
+            className="todo-item__delete-button"
+            aria-label="Delete"
+            title="Delete"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 5L5 15M5 5L15 15"
+                stroke="#757575"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </li>
       </ul>
-
-      {/* условный рендеринг в jsx */}
-      {/*
-      {isLoggedIn && <p>hi, {username}!</p>}
-      <p>{isLoggedIn ? `hi, ${username}` : 'please log in'}</p>
-      {isLoggedIn ? <p>hi, {username}!</p> : <button>log in</button>}
-      */}
-      {content}
-
-      {/* разбор оссобенностей и подводных камней синтаксиса jsx */}
-      {/*
-      <p style={{ color: 'red', fontWeight: 700 }}>Hi, {username}!</p>
-      <p>{1 + 1}</p>
-      <p>{username.toUpperCase()}</p>
-      <p>{new Date().toLocaleDateString()}</p>
-      <hr />
-      <label htmlFor="email"></label>
-      <input id="email" type="email" required={true} />
-      */}
-      {/* это комментарий внутри jsx */}
-    </>
+      <div className="todo__empty-message"></div>
+    </div>
   )
 }
 
