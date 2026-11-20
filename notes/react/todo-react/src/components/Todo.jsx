@@ -1,3 +1,4 @@
+import useState from 'react'
 import AddTaskForm from "./AddTaskForm"
 import SearchTaskForm from "./SearchTaskForm"
 import TodoInfo from "./TodoInfo"
@@ -8,6 +9,8 @@ const Todo = () => {
         { id: 'task-1', title: 'buy a milk', isDone: false },
         { id: 'task-2', title: 'drink a milk', isDone: true },
     ]
+
+    const [value, setValue] = useState(initialValue)
 
     const deleteAllTasks = () => {
       console.log('deleting all tasks!')
