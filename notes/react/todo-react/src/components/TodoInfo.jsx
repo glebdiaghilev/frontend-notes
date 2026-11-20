@@ -12,7 +12,10 @@ const TodoInfo = (props) => {
             Done {done} from {total}
           </div>
           {hasTasks && (
-            <button className="todo__delete-all-button" type="button">
+            <button 
+              className="todo__delete-all-button" 
+              type="button"
+            >
               Delete All
             </button>
           )}
